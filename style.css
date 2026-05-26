@@ -216,10 +216,14 @@ button {
     transform: none;
   }
 
+  #btn-no.escaping {
+    position: fixed;
+  }
+
   .options-page {
     gap: 18px;
     padding: 20px 16px;
-    justify-content: flex-start;
+    justify-content: center;
   }
 
   .options-page .container {
@@ -228,7 +232,7 @@ button {
 
   .options-page h1 {
     font-size: 1.3rem;
-    margin: 10px 0 4px;
+    margin: 0 0 4px;
   }
 
   .date-grid {

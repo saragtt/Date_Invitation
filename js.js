@@ -1,7 +1,9 @@
 const btnNo = document.getElementById("btn-no");
 
 if (btnNo) {
-  btnNo.addEventListener("mouseover", () => {
+  const moveNoButton = () => {
+    btnNo.classList.add("escaping");
+
     const maxX = window.innerWidth - btnNo.offsetWidth;
     const maxY = window.innerHeight - btnNo.offsetHeight;
 
@@ -10,6 +12,12 @@ if (btnNo) {
 
     btnNo.style.left = randomX + "px";
     btnNo.style.top = randomY + "px";
+  };
+
+  btnNo.addEventListener("mouseover", moveNoButton);
+  btnNo.addEventListener("touchstart", (event) => {
+    event.preventDefault();
+    moveNoButton();
   });
 }
 
