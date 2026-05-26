@@ -24,6 +24,10 @@ h1 {
 
 .buttons {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
 }
 
 button {
@@ -208,12 +212,13 @@ button {
 
   .buttons {
     display: flex;
-
     flex-direction: column;
-
     align-items: center;
-
     gap: 20px;
+  }
+
+  #btn-no {
+    position: static;
   }
 
   button {
