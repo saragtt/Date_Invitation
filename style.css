@@ -143,89 +143,48 @@ button {
   box-shadow: 0 12px 24px rgba(255, 94, 120, 0.32);
 }
 
-@media (max-width: 800px) {
-  .options-page {
-    gap: 18px;
-    padding: 22px 14px;
-  }
-
-  .date-grid {
-    grid-template-columns: 1fr;
-    width: min(100%, 320px);
-    gap: 12px;
-  }
-
-  .date-card button {
-    min-height: 68px;
-    padding: 14px;
-  }
-
-  .final-card {
-    padding: 32px 20px;
-    border-radius: 22px;
-  }
-
-  .final-card h1 {
-    padding: 0;
-    margin-bottom: 20px;
-    font-size: clamp(1.55rem, 8vw, 2rem);
-    line-height: 1.25;
-  }
-
-  .final-choice {
-    margin-bottom: 26px;
-    font-size: 17px;
-    line-height: 1.45;
-  }
-
-  .whatsapp-button {
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 16px 14px;
-    font-size: 16px;
-  }
-}
-
-@media (max-height: 520px) {
-  .final-card {
-    padding: 24px 18px;
-  }
-
-  .final-card h1 {
-    margin-bottom: 14px;
-  }
-
-  .final-choice {
-    margin-bottom: 18px;
-  }
-}
-
 @media (max-width: 768px) {
   h1 {
     font-size: 1.5rem;
-
     padding: 0 20px;
-
     text-align: center;
   }
 
-  .buttons {
+  .container {
+    width: 90%;
+    max-width: 420px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+  }
+
+  .buttons {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100px;
+
+    width: 100%;
   }
 
   #btn-no {
-    position: static;
+    position: absolute; /* NON static */
   }
 
   button {
     width: 220px;
-
     padding: 18px;
-
     font-size: 16px;
   }
+}
+
+.container {
+  text-align: center;
+
+  width: 90%;
+  max-width: 500px;
 }
