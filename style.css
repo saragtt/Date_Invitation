@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  height: 100vh;
+  height: 100dvh;
 
   display: flex;
   justify-content: center;
@@ -57,7 +57,7 @@ button {
 }
 
 .options-page {
-  min-height: 100vh;
+  min-height: 100dvh;
   height: auto;
   box-sizing: border-box;
   flex-direction: column;
@@ -94,10 +94,106 @@ button {
   box-shadow: 0 12px 24px rgba(255, 94, 120, 0.32);
 }
 
+.final-page {
+  min-height: 100dvh;
+  height: auto;
+  box-sizing: border-box;
+  padding: 24px;
+  overflow-y: auto;
+}
+
+.final-card {
+  width: min(100%, 540px);
+  box-sizing: border-box;
+  padding: 48px 36px;
+  border-radius: 28px;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 14px 38px rgba(0, 143, 166, 0.16);
+}
+
+.final-card h1 {
+  margin: 0 0 24px;
+}
+
+.final-choice {
+  margin: 0 0 32px;
+  font-size: 19px;
+}
+
+.whatsapp-button {
+  display: inline-block;
+  padding: 16px 28px;
+  border-radius: 15px;
+  color: white;
+  background-color: #08a9c5;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.whatsapp-button:hover {
+  background-color: #ff5e78;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(255, 94, 120, 0.32);
+}
+
 @media (max-width: 600px) {
+  .options-page {
+    gap: 18px;
+    padding: 22px 14px;
+  }
+
   .date-grid {
     grid-template-columns: 1fr;
     width: min(100%, 320px);
+    gap: 12px;
+  }
+
+  .date-card button {
+    min-height: 68px;
+    padding: 14px;
+  }
+
+  .final-card {
+    padding: 32px 20px;
+    border-radius: 22px;
+  }
+
+  .final-card h1 {
+    padding: 0;
+    margin-bottom: 20px;
+    font-size: clamp(1.55rem, 8vw, 2rem);
+    line-height: 1.25;
+  }
+
+  .final-choice {
+    margin-bottom: 26px;
+    font-size: 17px;
+    line-height: 1.45;
+  }
+
+  .whatsapp-button {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 16px 14px;
+    font-size: 16px;
+  }
+}
+
+@media (max-height: 520px) {
+  .final-card {
+    padding: 24px 18px;
+  }
+
+  .final-card h1 {
+    margin-bottom: 14px;
+  }
+
+  .final-choice {
+    margin-bottom: 18px;
   }
 }
 
@@ -128,9 +224,4 @@ button {
     font-size: 16px;
   }
 
-  .date-card {
-    width: 85%;
-
-    margin: 15px auto;
-  }
 }

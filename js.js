@@ -22,9 +22,25 @@ if (btnYes) {
 }
 
 function chooseDate(choice) {
+  sessionStorage.setItem("chosenDate", choice);
+  window.location.href = `final-page.html?choice=${encodeURIComponent(choice)}`;
+}
+
+const chosenDate = document.getElementById("chosen-date");
+const whatsappLink = document.getElementById("whatsapp-link");
+
+if (chosenDate && whatsappLink) {
   const phone = "31687500793";
+  const params = new URLSearchParams(window.location.search);
+  const choice = params.get("choice") || sessionStorage.getItem("chosenDate");
 
-  const text = `I choose: ${choice} `;
-
-  window.location.href = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+  if (choice) {
+    sessionStorage.setItem("chosenDate", choice);
+    chosenDate.textContent = choice;
+    whatsappLink.href = `https://wa.me/${phone}?text=${encodeURIComponent(`I choose: ${choice}`)}`;
+  } else {
+    chosenDate.textContent = "No date selected yet";
+    whatsappLink.textContent = "Choose a date";
+    whatsappLink.href = "date-options.html";
+  }
 }
