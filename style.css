@@ -143,7 +143,7 @@ button {
   box-shadow: 0 12px 24px rgba(255, 94, 120, 0.32);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .options-page {
     gap: 18px;
     padding: 22px 14px;
@@ -228,5 +228,4 @@ button {
 
     font-size: 16px;
   }
-
 }
